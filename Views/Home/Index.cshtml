@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Code_first_approch.Models.Students>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Salary</th>
+    </tr>
+    @foreach(var e in Model)
+            {
+                <tr>
+                    <td>@e.id</td>
+                    <td>@e.Name</td>
+                    <td>@e.Address</td>
+                    <td>@e.Email</td>
+                    <td>@e.Mobile</td>
+                    <td>@e.salary</td>
+                </tr>
+            }
+</table>
+
+<ul>
+    <li>@Html.ActionLink("Create","Create")</li>
+</ul>
